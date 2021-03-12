@@ -1,0 +1,24 @@
+{
+  "name": "@nichoth/photos",
+  "description": "The UI for a photo viewing application. Does not include a backend/protocol.",
+  "version": "0.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nichoth/photos.git"
+  },
+  "keywords": [
+    "photos",
+    "image",
+    "pictures"
+  ],
+  "author": "Nick Thomas <nichoth@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nichoth/photos/issues"
+  },
+  "homepage": "https://github.com/nichoth/photos#readme"
+}

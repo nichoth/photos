@@ -1,9 +1,10 @@
 {
   "name": "@nichoth/photos",
-  "description": "The UI for a photo viewing application. Does not include a backend/protocol.",
+  "description": "The UI for a photo viewing thing. Does not include a backend/protocol.",
   "version": "0.0.0",
   "main": "index.js",
   "scripts": {
+    "start": "budo src/index.js:bundle.js --dir=public --open --live -- -p esmify -t uglifyify -dv",
     "build": "browserify --debug -t uglifyify -p esmify src/index.js > public/bundle.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -33,6 +34,7 @@
   },
   "devDependencies": {
     "browserify": "^17.0.0",
+    "budo": "^11.6.4",
     "esmify": "^2.1.1",
     "sass": "^1.32.8",
     "uglifyify": "^5.0.2"

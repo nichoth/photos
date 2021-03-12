@@ -21,4 +21,6 @@ function photos () {
     return { bus, setRoute }
 }
 
+photos()
+
 module.exports = photos

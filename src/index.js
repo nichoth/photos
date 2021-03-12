@@ -1,5 +1,4 @@
 import { html } from 'htm/preact'
-import { render } from 'preact'
 var Bus = require('@nichoth/events')
 var OnRoute = require('route-event')
 
@@ -16,11 +15,7 @@ function photos () {
     onRoute(path => emit(evs.route.change, path))
     var { setRoute } = onRoute
 
-    render(_html, document.getElementById('content'))
-
-    return { bus, setRoute }
+    return { bus, setRoute, html: _html }
 }
-
-photos()
 
 module.exports = photos

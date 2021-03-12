@@ -2,10 +2,10 @@
   "name": "@nichoth/photos",
   "description": "The UI for a photo viewing thing. Does not include a backend/protocol.",
   "version": "0.0.0",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "start": "npm run build-sass && concurrently --kill-others \"npm run serve\" \"npm run watch-sass\"",
-    "serve": "budo src/index.js:bundle.js --dir=public --open --live -- -p esmify -t uglifyify -dv",
+    "serve": "budo example.js:bundle.js --dir=public --open --live -- -p esmify -t uglifyify -dv",
     "build-sass": "sass src/style/style.scss public/style.css",
     "watch-sass": "sass --watch src/style/style.scss public/style.css",
     "build": "browserify --debug -t uglifyify -p esmify src/index.js > public/bundle.js",

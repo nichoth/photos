@@ -5,7 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "start": "npm run build-sass && concurrently --kill-others \"npm run serve\" \"npm run watch-sass\"",
-    "serve": "budo example.js:bundle.js --dir=public --open --live -- -p esmify -t uglifyify -dv",
+    "serve": "budo example.js:bundle.js --pushstate --dir=public --open --live -- -p esmify -t uglifyify -dv",
     "build-sass": "sass src/style/style.scss public/style.css",
     "watch-sass": "sass --watch src/style/style.scss public/style.css",
     "build": "npm run build-sass && browserify --debug -t uglifyify -p esmify src/index.js > public/bundle.js",
@@ -28,12 +28,16 @@
   "homepage": "https://github.com/nichoth/photos#readme",
   "dependencies": {
     "@nichoth/events": "^1.1.2",
+    "generate-avatar": "^1.4.6",
     "htm": "^3.0.4",
+    "lodash": "^4.17.21",
     "observ": "^0.2.0",
     "observ-struct": "^6.0.0",
     "preact": "^10.5.12",
+    "raf": "^3.4.1",
     "route-event": "^3.1.0",
-    "ruta3": "^2.0.1"
+    "ruta3": "^2.0.1",
+    "ssb-marked": "^0.7.4"
   },
   "devDependencies": {
     "browserify": "^17.0.0",

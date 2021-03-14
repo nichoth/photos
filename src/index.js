@@ -5,6 +5,8 @@ var OnRoute = require('route-event')
 var raf = require('raf')
 var Shell = require('./shell')
 var state = require('./state')
+var Router = require('./routes')
+var evs = require('../EVENTS')
 
 function photos () {
     var bus = Bus({
@@ -13,7 +15,7 @@ function photos () {
     var emit = bus.emit.bind(bus)
 
     function Component ({ emit, state }) {
-        var router = Router({ emit, state })
+        var router = Router()
         const [_state, setState] = useState(state())
     
         state(function onChange (newState) {
@@ -39,7 +41,9 @@ function photos () {
 
     var onRoute = OnRoute()
 
-    onRoute(path => emit(evs.route.change, path))
+    onRoute(path => {
+        emit(evs.route.change, path)
+    })
     var { setRoute } = onRoute
 
     return { bus, setRoute, html: _html, state }

@@ -5,7 +5,7 @@ body {
     background-color: rgba(119, 119, 119, 1);  // middle gray
     padding-bottom: 4rem;
     button {
-      cursor: pointer;
+        cursor: pointer;
     }
 }
   
@@ -43,7 +43,8 @@ button.edit {
 .user-name {
     position: relative;
     bottom: 0.5rem;
-    & > button {
+
+    &>button {
         background-color: transparent;
         border: none;
         color: blue;

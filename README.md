@@ -20,3 +20,20 @@ bus.on('*', (eventName, data) => {
 
 render(html, document.getElementById('content'))
 ```
+
+## events
+
+```js
+var evs = require('@nichoth/events/namespace')({
+    test: ['foo'],
+    profile: ['setAvatar', 'save', 'get'],
+    route: ['change'],
+    posts: ['get'],
+    post: ['new'],
+    followed: ['get'],
+    follow: ['start'],
+    pub: ['join'],
+    feed: ['get'],
+    people: ['getProfile']
+})
+```

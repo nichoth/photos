@@ -8,7 +8,7 @@
     "serve": "budo example.js:bundle.js --dir=public --open --live -- -p esmify -t uglifyify -dv",
     "build-sass": "sass src/style/style.scss public/style.css",
     "watch-sass": "sass --watch src/style/style.scss public/style.css",
-    "build": "browserify --debug -t uglifyify -p esmify src/index.js > public/bundle.js",
+    "build": "npm run build-sass && browserify --debug -t uglifyify -p esmify src/index.js > public/bundle.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

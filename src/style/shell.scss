@@ -1,0 +1,23 @@
+.menu {
+    padding: 0.5em;
+    border-bottom: 1px solid black;
+    margin-bottom: 1em;
+    height: 2em;
+  
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  
+    & > div {
+        height: 100%;
+    }
+}
+  
+.post-icon {
+    text-decoration: none;
+  
+    &.active {
+      text-decoration: underline;
+    }
+}
+  

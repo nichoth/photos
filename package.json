@@ -1,7 +1,7 @@
 {
   "name": "@nichoth/photos",
   "description": "The UI for a photo viewing thing. Does not include a backend/protocol.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "src/index.js",
   "scripts": {
     "start": "npm run build-sass && concurrently --kill-others \"npm run serve\" \"npm run watch-sass\"",

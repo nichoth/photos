@@ -1,0 +1,23 @@
+.single-post {
+  padding: 0 5em;
+  margin-bottom: 5em;
+
+  img {
+      width: 100%;
+      max-height: 100%;
+  }
+
+  h1 {
+      font-weight: normal;
+      font-size: 1.5rem;
+      a {
+          text-decoration: none;
+      }
+  }
+
+  .author {
+      h1 {
+          display: inline-block;
+      }
+  }
+}

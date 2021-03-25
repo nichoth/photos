@@ -1,0 +1,25 @@
+.feed-route {
+  hr {
+      margin: 2em 0;
+      background-color: gray;
+  }
+}
+
+.profile-info {
+  padding: 1em;
+  display: flex;
+  flex-wrap: wrap;
+
+  img.avatar-big {
+      border: 1px solid black;
+      object-fit: cover;
+      border-radius: 50%;
+      width: 500px;
+      height: 500px;
+      overflow: hidden;
+  }
+}
+
+ul.feed {
+  padding: 2em;
+}

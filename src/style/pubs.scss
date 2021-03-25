@@ -1,0 +1,28 @@
+.pubs-route {
+  padding: 1em;
+
+  p {
+      margin-bottom: 0;
+  }
+
+  .form-part {
+      margin-bottom: 0.5em;
+  }
+
+  .pubs-list {
+      list-style: none;
+      padding: 0;
+      li.pub {
+          margin-bottom: 0.5em;
+          border: 1px solid aliceblue;
+          padding: 1em;
+      }
+  }
+}
+
+.pubs {
+  #invite {
+      width: 100%;
+      padding: 0.8em;
+  }
+}

@@ -27,7 +27,6 @@ render(html, document.getElementById('content'))
 ```
 
 ## events
-
 ```js
 var evs = require('@nichoth/events/namespace')({
     test: ['foo'],
@@ -42,3 +41,21 @@ var evs = require('@nichoth/events/namespace')({
     people: ['getProfile']
 })
 ```
+
+## state
+```js
+var state = struct({
+    route: observ('/'),
+    me: observ({}),
+    posts: observ(null),
+    postUrls: observ({}),
+    people: observ({}),
+    followed: observ([]),
+    feeds: observ({}),
+    pubs: struct({
+        list: observ([]),
+        err: observ(null)
+    })
+})
+```
+

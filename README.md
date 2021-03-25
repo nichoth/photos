@@ -10,12 +10,17 @@ npm i @nichoth/photos
 
 ```js
 var photos = require('@nichoth/photos')
+var evs = require('@nichoth/photos/EVENTS')
 import { render } from 'preact'
 
-var { bus, setRoute, html } = photos()
+var { bus, setRoute, html, state } = photos()
 
 bus.on('*', (eventName, data) => {
     console.log('*', eventName, data)
+})
+
+bus.on(evs.route.change, route => {
+    state.route.set(route)
 })
 
 render(html, document.getElementById('content'))

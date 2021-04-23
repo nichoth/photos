@@ -30,8 +30,6 @@ function photos () {
         var route = match ? match.action(match) : null
         var routeView = route ? route.view : null
     
-        console.log('in component', _state)
-    
         return html`<${Shell} emit=${emit} ...${_state}>
             <${routeView} emit=${emit} ...${_state} />
         <//>`

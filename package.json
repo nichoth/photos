@@ -30,7 +30,6 @@
   "dependencies": {
     "@nichoth/events": "^1.1.2",
     "generate-avatar": "^1.4.6",
-    "htm": "^3.0.4",
     "lodash": "^4.17.21",
     "observ": "^0.2.0",
     "observ-struct": "^6.0.0",
@@ -45,6 +44,7 @@
     "budo": "^11.6.4",
     "concurrently": "^6.0.0",
     "esmify": "^2.1.1",
+    "htm": "^3.0.4",
     "sass": "^1.32.8",
     "uglifyify": "^5.0.2"
   }

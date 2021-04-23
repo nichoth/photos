@@ -13,7 +13,7 @@ var photos = require('@nichoth/photos')
 var evs = require('@nichoth/photos/EVENTS')
 import { render } from 'preact'
 
-var { bus, setRoute, html, state } = photos()
+var { bus, setRoute, photosComponent, state } = photos()
 
 bus.on('*', (eventName, data) => {
     console.log('*', eventName, data)
@@ -23,7 +23,9 @@ bus.on(evs.route.change, route => {
     state.route.set(route)
 })
 
-render(html, document.getElementById('content'))
+render(html`<${photosComponent}>
+    <p>woooo</p>
+</${photosComponent}`, document.getElementById('content'))
 ```
 
 ## events

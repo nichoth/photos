@@ -14,7 +14,8 @@ function photos () {
     })
     var emit = bus.emit.bind(bus)
 
-    function Component ({ emit, state }) {
+    function Component (props) {
+        var { emit, state } = props
         var router = Router()
         const [_state, setState] = useState(state())
     
@@ -32,10 +33,17 @@ function photos () {
     
         return html`<${Shell} emit=${emit} ...${_state}>
             <${routeView} emit=${emit} ...${_state} />
+            ${props.children}
         <//>`
     }
 
-    var _html = html`<${Component} emit=${emit} state=${state} />`
+    var photosComponent = function (props) {
+        return html`<${Component} emit=${emit} state=${state}>
+            ${props.children}
+        </${Component}>`
+    }
+
+    // var _html = html`<${Component} emit=${emit} state=${state} />`
 
     var onRoute = OnRoute()
 
@@ -44,7 +52,7 @@ function photos () {
     })
     var { setRoute } = onRoute
 
-    return { bus, setRoute, html: _html, state }
+    return { bus, setRoute, photosComponent, state }
 }
 
 module.exports = photos
